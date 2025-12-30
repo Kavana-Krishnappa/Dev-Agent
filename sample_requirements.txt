@@ -1,0 +1,18 @@
+[
+  {
+    "id": "FR-LOGIN-01",
+    "title": "User Login with Password Hashing",
+    "description": "As a user, I want to log in securely with my username and password so that my account is protected from unauthorized access.",
+    "acceptance_criteria": [
+      "Given a registered user, when they enter correct credentials, then they should be logged in successfully within 2 seconds",
+      "Given a user enters incorrect password, when they attempt login, then they should see an error message and login should fail",
+      "Given a new password is set, when it is stored, then it must be hashed using bcrypt or argon2"
+    ],
+    "nfrs": [
+      "Security: All passwords must be hashed using bcrypt with salt rounds >= 12",
+      "Security: All communication must use HTTPS",
+      "Performance: Login response time must be < 2 seconds",
+      "Usability: Error messages should be clear and user-friendly"
+    ]
+  }
+]
